@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Customer Segmentation Dashboard using K-Means Clustering Algorithm. Visualize customer groups, analyze spending patterns, and gain business insights.">
+    <title>Customer Segmentation Dashboard | K-Means Clustering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <div class="bg-particles" id="bgParticles"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="5" fill="#818cf8"/>
+                        <circle cx="6" cy="8" r="3" fill="#f472b6"/>
+                        <circle cx="26" cy="8" r="3" fill="#34d399"/>
+                        <circle cx="8" cy="26" r="3" fill="#fbbf24"/>
+                        <circle cx="24" cy="24" r="3" fill="#60a5fa"/>
+                        <line x1="16" y1="16" x2="6" y2="8" stroke="#818cf8" stroke-width="1" opacity="0.4"/>
+                        <line x1="16" y1="16" x2="26" y2="8" stroke="#818cf8" stroke-width="1" opacity="0.4"/>
+                        <line x1="16" y1="16" x2="8" y2="26" stroke="#818cf8" stroke-width="1" opacity="0.4"/>
+                        <line x1="16" y1="16" x2="24" y2="24" stroke="#818cf8" stroke-width="1" opacity="0.4"/>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="logo-title">Customer Segmentation</h1>
+                    <p class="logo-subtitle">K-Means Clustering Analysis</p>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="#overview" class="nav-link active" data-section="overview">Overview</a>
+                <a href="#clusters" class="nav-link" data-section="clusters">Clusters</a>
+                <a href="#visualizations" class="nav-link" data-section="visualizations">Visualizations</a>
+                <a href="#insights" class="nav-link" data-section="insights">Insights</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" id="overview">
+            <div class="hero-text">
+                <span class="hero-badge">📊 Machine Learning</span>
+                <h2 class="hero-title">Customer Segmentation <br><span class="gradient-text">Analytics Dashboard</span></h2>
+                <p class="hero-description">Discover hidden customer patterns using K-Means clustering. Segment your customers into meaningful groups to optimize marketing strategies and maximize ROI.</p>
+            </div>
+        </section>
+
+        <!-- KPI Cards -->
+        <section class="kpi-section">
+            <div class="kpi-card" id="kpiCustomers">
+                <div class="kpi-icon" style="background: linear-gradient(135deg, #818cf8, #6366f1);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div class="kpi-value" data-target="200">0</div>
+                <div class="kpi-label">Total Customers</div>
+                <div class="kpi-trend up">↑ Analyzed</div>
+            </div>
+            <div class="kpi-card" id="kpiClusters">
+                <div class="kpi-icon" style="background: linear-gradient(135deg, #f472b6, #ec4899);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <circle cx="5" cy="5" r="2"/>
+                        <circle cx="19" cy="5" r="2"/>
+                        <circle cx="5" cy="19" r="2"/>
+                        <circle cx="19" cy="19" r="2"/>
+                    </svg>
+                </div>
+                <div class="kpi-value" data-target="5">0</div>
+                <div class="kpi-label">Segments Found</div>
+                <div class="kpi-trend up">K-Means</div>
+            </div>
+            <div class="kpi-card" id="kpiSilhouette">
+                <div class="kpi-icon" style="background: linear-gradient(135deg, #34d399, #10b981);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
+                </div>
+                <div class="kpi-value" id="silhouetteValue">0.00</div>
+                <div class="kpi-label">Silhouette Score</div>
+                <div class="kpi-trend up">Good Fit</div>
+            </div>
+            <div class="kpi-card" id="kpiAvgIncome">
+                <div class="kpi-icon" style="background: linear-gradient(135deg, #fbbf24, #f59e0b);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"/>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                </div>
+                <div class="kpi-value" id="avgIncomeValue">₹0</div>
+                <div class="kpi-label">Avg. Annual Income</div>
+                <div class="kpi-trend neutral">Across All</div>
+            </div>
+        </section>
+
+        <!-- Main Visualization Section -->
+        <section class="viz-section" id="visualizations">
+            <h2 class="section-title">
+                <span class="section-icon">📈</span>
+                Interactive Visualizations
+            </h2>
+
+            <!-- Scatter Plot -->
+            <div class="chart-container glass-card">
+                <div class="chart-header">
+                    <div>
+                        <h3 class="chart-title">Customer Scatter Plot</h3>
+                        <p class="chart-subtitle">Annual Income vs Spending Score — colored by cluster</p>
+                    </div>
+                    <div class="chart-controls">
+                        <button class="control-btn active" data-view="income-spending" id="btnIncomeSpending">Income vs Spending</button>
+                        <button class="control-btn" data-view="income-age" id="btnIncomeAge">Income vs Age</button>
+                        <button class="control-btn" data-view="spending-age" id="btnSpendingAge">Spending vs Age</button>
+                    </div>
+                </div>
+                <div class="chart-body">
+                    <canvas id="scatterChart" width="800" height="450"></canvas>
+                </div>
+                <div class="chart-legend" id="scatterLegend"></div>
+            </div>
+
+            <!-- Two Column Charts -->
+            <div class="charts-grid">
+                <!-- Elbow Method -->
+                <div class="chart-container glass-card">
+                    <div class="chart-header">
+                        <div>
+                            <h3 class="chart-title">Elbow Method</h3>
+                            <p class="chart-subtitle">WCSS vs Number of Clusters (K)</p>
+                        </div>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="elbowChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+
+                <!-- Cluster Distribution -->
+                <div class="chart-container glass-card">
+                    <div class="chart-header">
+                        <div>
+                            <h3 class="chart-title">Cluster Distribution</h3>
+                            <p class="chart-subtitle">Number of customers per segment</p>
+                        </div>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="distributionChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Silhouette + Radar -->
+            <div class="charts-grid">
+                <!-- Silhouette Scores -->
+                <div class="chart-container glass-card">
+                    <div class="chart-header">
+                        <div>
+                            <h3 class="chart-title">Silhouette Score Analysis</h3>
+                            <p class="chart-subtitle">Cluster quality across K values</p>
+                        </div>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="silhouetteChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+
+                <!-- Radar Chart -->
+                <div class="chart-container glass-card">
+                    <div class="chart-header">
+                        <div>
+                            <h3 class="chart-title">Cluster Profiles (Radar)</h3>
+                            <p class="chart-subtitle">Normalized feature comparison</p>
+                        </div>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="radarChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cluster Details Section -->
+        <section class="clusters-section" id="clusters">
+            <h2 class="section-title">
+                <span class="section-icon">🎯</span>
+                Cluster Deep Dive
+            </h2>
+            <div class="cluster-cards" id="clusterCards">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Customer Table -->
+        <section class="table-section">
+            <div class="glass-card">
+                <div class="chart-header">
+                    <div>
+                        <h3 class="chart-title">Customer Data Table</h3>
+                        <p class="chart-subtitle">All customers with cluster assignments</p>
+                    </div>
+                    <div class="table-controls">
+                        <select id="clusterFilter" class="filter-select">
+                            <option value="all">All Clusters</option>
+                        </select>
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search by ID...">
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table class="data-table" id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Annual Income (₹)</th>
+                                <th>Spending Score</th>
+                                <th>Purchases</th>
+                                <th>Cluster</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-pagination" id="tablePagination"></div>
+            </div>
+        </section>
+
+        <!-- Insights Section -->
+        <section class="insights-section" id="insights">
+            <h2 class="section-title">
+                <span class="section-icon">💡</span>
+                Business Insights & Recommendations
+            </h2>
+            <div class="insights-grid">
+                <div class="insight-card glass-card">
+                    <div class="insight-icon" style="background: linear-gradient(135deg, #818cf8, #6366f1);">🎯</div>
+                    <h3>Targeted Marketing</h3>
+                    <p>Premium customers (high income, high spending) respond best to exclusive offers and loyalty programs. Focus personalized campaigns on this high-value segment.</p>
+                </div>
+                <div class="insight-card glass-card">
+                    <div class="insight-icon" style="background: linear-gradient(135deg, #f472b6, #ec4899);">💎</div>
+                    <h3>Upsell Opportunities</h3>
+                    <p>Affluent customers with low spending scores represent untapped potential. Analyze their preferences and create targeted incentives to increase engagement.</p>
+                </div>
+                <div class="insight-card glass-card">
+                    <div class="insight-icon" style="background: linear-gradient(135deg, #34d399, #10b981);">📊</div>
+                    <h3>Budget Optimization</h3>
+                    <p>Budget-conscious customers can be retained with value-for-money deals. Avoid spending marketing budget on premium offerings for this segment.</p>
+                </div>
+                <div class="insight-card glass-card">
+                    <div class="insight-icon" style="background: linear-gradient(135deg, #fbbf24, #f59e0b);">🛒</div>
+                    <h3>Enthusiastic Shoppers</h3>
+                    <p>Customers with lower income but high spending are brand enthusiasts. Engage them with referral programs and social proof campaigns to amplify word-of-mouth.</p>
+                </div>
+                <div class="insight-card glass-card">
+                    <div class="insight-icon" style="background: linear-gradient(135deg, #60a5fa, #3b82f6);">📈</div>
+                    <h3>Revenue Growth</h3>
+                    <p>By targeting each segment with tailored strategies, businesses can expect 15-30% improvement in marketing ROI and customer lifetime value.</p>
+                </div>
+                <div class="insight-card glass-card">
+                    <div class="insight-icon" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6);">🔄</div>
+                    <h3>Future Enhancement</h3>
+                    <p>Consider implementing DBSCAN for non-spherical clusters, real-time segmentation with streaming data, and integration with CRM for automated campaigns.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology Section -->
+        <section class="methodology-section">
+            <h2 class="section-title">
+                <span class="section-icon">⚙️</span>
+                Methodology
+            </h2>
+            <div class="methodology-flow">
+                <div class="flow-step">
+                    <div class="flow-number">1</div>
+                    <div class="flow-content">
+                        <h4>Data Collection</h4>
+                        <p>Gather customer data including demographics, income, and spending behavior</p>
+                    </div>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-step">
+                    <div class="flow-number">2</div>
+                    <div class="flow-content">
+                        <h4>Preprocessing</h4>
+                        <p>Handle missing values, encode categories, normalize features</p>
+                    </div>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-step">
+                    <div class="flow-number">3</div>
+                    <div class="flow-content">
+                        <h4>Feature Selection</h4>
+                        <p>Select Annual Income and Spending Score as key features</p>
+                    </div>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-step">
+                    <div class="flow-number">4</div>
+                    <div class="flow-content">
+                        <h4>Elbow Method</h4>
+                        <p>Determine optimal K using WCSS and Silhouette analysis</p>
+                    </div>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-step">
+                    <div class="flow-number">5</div>
+                    <div class="flow-content">
+                        <h4>K-Means Clustering</h4>
+                        <p>Apply algorithm with K-Means++ initialization</p>
+                    </div>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-step">
+                    <div class="flow-number">6</div>
+                    <div class="flow-content">
+                        <h4>Visualization</h4>
+                        <p>Generate scatter plots, distributions, and cluster profiles</p>
+                    </div>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-step">
+                    <div class="flow-number">7</div>
+                    <div class="flow-content">
+                        <h4>Interpretation</h4>
+                        <p>Analyze clusters and derive actionable business insights</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Customer Segmentation using K-Means Clustering | Built with Python, Scikit-learn & JavaScript</p>
+            <p class="footer-tech">Technologies: Python • Pandas • NumPy • Matplotlib • Seaborn • Scikit-learn</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1938 @@
+{
+  "total_customers": 200,
+  "num_clusters": 5,
+  "features_used": [
+    "Annual_Income",
+    "Spending_Score"
+  ],
+  "silhouette_score": 0.4110809968670584,
+  "elbow_data": {
+    "k_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "wcss": [
+      242.82,
+      147.44,
+      97.8,
+      77.49,
+      62.91,
+      54.69,
+      46.99,
+      41.69,
+      36.18
+    ],
+    "silhouette_scores": [
+      0.3794,
+      0.4132,
+      0.4359,
+      0.4111,
+      0.3954,
+      0.3767,
+      0.3832,
+      0.3837,
+      0.3861
+    ]
+  },
+  "clusters": [
+    {
+      "id": 0,
+      "label": " Budget Conscious (Low Income, Low Spending)",
+      "count": 31,
+      "percentage": 15.5,
+      "avg_age": 48.0,
+      "avg_income": 39968.0,
+      "avg_spending": 19.4,
+      "avg_purchases": 6.0,
+      "centroid": {
+        "income": 39968.0,
+        "spending": 19.4
+      },
+      "gender_split": {
+        "male": 15,
+        "female": 16
+      }
+    },
+    {
+      "id": 1,
+      "label": " Enthusiastic Shoppers (Low Income, High Spending)",
+      "count": 62,
+      "percentage": 31.0,
+      "avg_age": 26.4,
+      "avg_income": 52161.0,
+      "avg_spending": 81.3,
+      "avg_purchases": 26.1,
+      "centroid": {
+        "income": 52161.0,
+        "spending": 81.3
+      },
+      "gender_split": {
+        "male": 21,
+        "female": 41
+      }
+    },
+    {
+      "id": 2,
+      "label": " Premium Customers (High Income, High Spending)",
+      "count": 33,
+      "percentage": 16.5,
+      "avg_age": 29.0,
+      "avg_income": 148273.0,
+      "avg_spending": 83.2,
+      "avg_purchases": 28.0,
+      "centroid": {
+        "income": 148273.0,
+        "spending": 83.2
+      },
+      "gender_split": {
+        "male": 11,
+        "female": 22
+      }
+    },
+    {
+      "id": 3,
+      "label": " Affluent & Careful (High Income, Low Spending)",
+      "count": 33,
+      "percentage": 16.5,
+      "avg_age": 51.2,
+      "avg_income": 144121.0,
+      "avg_spending": 27.6,
+      "avg_purchases": 8.2,
+      "centroid": {
+        "income": 144121.0,
+        "spending": 27.6
+      },
+      "gender_split": {
+        "male": 24,
+        "female": 9
+      }
+    },
+    {
+      "id": 4,
+      "label": " Moderate Customers (Average Income & Spending)",
+      "count": 41,
+      "percentage": 20.5,
+      "avg_age": 40.2,
+      "avg_income": 80293.0,
+      "avg_spending": 45.5,
+      "avg_purchases": 13.7,
+      "centroid": {
+        "income": 80293.0,
+        "spending": 45.5
+      },
+      "gender_split": {
+        "male": 28,
+        "female": 13
+      }
+    }
+  ],
+  "scatter_data": [
+    {
+      "id": 1,
+      "age": 19,
+      "gender": "Male",
+      "income": 15000,
+      "spending": 39,
+      "purchases": 12,
+      "cluster": 0
+    },
+    {
+      "id": 2,
+      "age": 21,
+      "gender": "Male",
+      "income": 15000,
+      "spending": 81,
+      "purchases": 25,
+      "cluster": 1
+    },
+    {
+      "id": 3,
+      "age": 20,
+      "gender": "Female",
+      "income": 16000,
+      "spending": 6,
+      "purchases": 3,
+      "cluster": 0
+    },
+    {
+      "id": 4,
+      "age": 23,
+      "gender": "Female",
+      "income": 16000,
+      "spending": 77,
+      "purchases": 22,
+      "cluster": 1
+    },
+    {
+      "id": 5,
+      "age": 31,
+      "gender": "Female",
+      "income": 17000,
+      "spending": 40,
+      "purchases": 14,
+      "cluster": 0
+    },
+    {
+      "id": 6,
+      "age": 22,
+      "gender": "Female",
+      "income": 17000,
+      "spending": 76,
+      "purchases": 20,
+      "cluster": 1
+    },
+    {
+      "id": 7,
+      "age": 35,
+      "gender": "Female",
+      "income": 18000,
+      "spending": 6,
+      "purchases": 2,
+      "cluster": 0
+    },
+    {
+      "id": 8,
+      "age": 23,
+      "gender": "Male",
+      "income": 18000,
+      "spending": 94,
+      "purchases": 30,
+      "cluster": 1
+    },
+    {
+      "id": 9,
+      "age": 64,
+      "gender": "Male",
+      "income": 19000,
+      "spending": 3,
+      "purchases": 1,
+      "cluster": 0
+    },
+    {
+      "id": 10,
+      "age": 30,
+      "gender": "Female",
+      "income": 19000,
+      "spending": 72,
+      "purchases": 18,
+      "cluster": 1
+    },
+    {
+      "id": 11,
+      "age": 67,
+      "gender": "Male",
+      "income": 19000,
+      "spending": 14,
+      "purchases": 5,
+      "cluster": 0
+    },
+    {
+      "id": 12,
+      "age": 35,
+      "gender": "Female",
+      "income": 20000,
+      "spending": 99,
+      "purchases": 35,
+      "cluster": 1
+    },
+    {
+      "id": 13,
+      "age": 58,
+      "gender": "Female",
+      "income": 20000,
+      "spending": 15,
+      "purchases": 4,
+      "cluster": 0
+    },
+    {
+      "id": 14,
+      "age": 24,
+      "gender": "Male",
+      "income": 20000,
+      "spending": 77,
+      "purchases": 21,
+      "cluster": 1
+    },
+    {
+      "id": 15,
+      "age": 37,
+      "gender": "Female",
+      "income": 21000,
+      "spending": 13,
+      "purchases": 6,
+      "cluster": 0
+    },
+    {
+      "id": 16,
+      "age": 22,
+      "gender": "Female",
+      "income": 23000,
+      "spending": 79,
+      "purchases": 24,
+      "cluster": 1
+    },
+    {
+      "id": 17,
+      "age": 35,
+      "gender": "Female",
+      "income": 23000,
+      "spending": 35,
+      "purchases": 11,
+      "cluster": 0
+    },
+    {
+      "id": 18,
+      "age": 20,
+      "gender": "Male",
+      "income": 24000,
+      "spending": 66,
+      "purchases": 19,
+      "cluster": 1
+    },
+    {
+      "id": 19,
+      "age": 52,
+      "gender": "Female",
+      "income": 25000,
+      "spending": 29,
+      "purchases": 8,
+      "cluster": 0
+    },
+    {
+      "id": 20,
+      "age": 35,
+      "gender": "Male",
+      "income": 25000,
+      "spending": 98,
+      "purchases": 33,
+      "cluster": 1
+    },
+    {
+      "id": 21,
+      "age": 35,
+      "gender": "Female",
+      "income": 28000,
+      "spending": 35,
+      "purchases": 10,
+      "cluster": 0
+    },
+    {
+      "id": 22,
+      "age": 25,
+      "gender": "Male",
+      "income": 28000,
+      "spending": 73,
+      "purchases": 20,
+      "cluster": 1
+    },
+    {
+      "id": 23,
+      "age": 46,
+      "gender": "Female",
+      "income": 29000,
+      "spending": 5,
+      "purchases": 2,
+      "cluster": 0
+    },
+    {
+      "id": 24,
+      "age": 31,
+      "gender": "Male",
+      "income": 30000,
+      "spending": 73,
+      "purchases": 22,
+      "cluster": 1
+    },
+    {
+      "id": 25,
+      "age": 54,
+      "gender": "Male",
+      "income": 30000,
+      "spending": 14,
+      "purchases": 5,
+      "cluster": 0
+    },
+    {
+      "id": 26,
+      "age": 29,
+      "gender": "Female",
+      "income": 33000,
+      "spending": 82,
+      "purchases": 28,
+      "cluster": 1
+    },
+    {
+      "id": 27,
+      "age": 45,
+      "gender": "Male",
+      "income": 33000,
+      "spending": 32,
+      "purchases": 9,
+      "cluster": 0
+    },
+    {
+      "id": 28,
+      "age": 35,
+      "gender": "Female",
+      "income": 35000,
+      "spending": 61,
+      "purchases": 17,
+      "cluster": 1
+    },
+    {
+      "id": 29,
+      "age": 40,
+      "gender": "Male",
+      "income": 35000,
+      "spending": 31,
+      "purchases": 10,
+      "cluster": 0
+    },
+    {
+      "id": 30,
+      "age": 23,
+      "gender": "Female",
+      "income": 36000,
+      "spending": 87,
+      "purchases": 29,
+      "cluster": 1
+    },
+    {
+      "id": 31,
+      "age": 60,
+      "gender": "Female",
+      "income": 37000,
+      "spending": 11,
+      "purchases": 4,
+      "cluster": 0
+    },
+    {
+      "id": 32,
+      "age": 21,
+      "gender": "Male",
+      "income": 37000,
+      "spending": 75,
+      "purchases": 23,
+      "cluster": 1
+    },
+    {
+      "id": 33,
+      "age": 53,
+      "gender": "Male",
+      "income": 38000,
+      "spending": 10,
+      "purchases": 3,
+      "cluster": 0
+    },
+    {
+      "id": 34,
+      "age": 18,
+      "gender": "Female",
+      "income": 38000,
+      "spending": 92,
+      "purchases": 31,
+      "cluster": 1
+    },
+    {
+      "id": 35,
+      "age": 49,
+      "gender": "Male",
+      "income": 39000,
+      "spending": 36,
+      "purchases": 12,
+      "cluster": 0
+    },
+    {
+      "id": 36,
+      "age": 21,
+      "gender": "Female",
+      "income": 39000,
+      "spending": 61,
+      "purchases": 18,
+      "cluster": 1
+    },
+    {
+      "id": 37,
+      "age": 42,
+      "gender": "Male",
+      "income": 40000,
+      "spending": 72,
+      "purchases": 21,
+      "cluster": 1
+    },
+    {
+      "id": 38,
+      "age": 30,
+      "gender": "Female",
+      "income": 40000,
+      "spending": 5,
+      "purchases": 2,
+      "cluster": 0
+    },
+    {
+      "id": 39,
+      "age": 36,
+      "gender": "Male",
+      "income": 42000,
+      "spending": 65,
+      "purchases": 19,
+      "cluster": 1
+    },
+    {
+      "id": 40,
+      "age": 20,
+      "gender": "Female",
+      "income": 42000,
+      "spending": 95,
+      "purchases": 34,
+      "cluster": 1
+    },
+    {
+      "id": 41,
+      "age": 65,
+      "gender": "Female",
+      "income": 43000,
+      "spending": 13,
+      "purchases": 4,
+      "cluster": 0
+    },
+    {
+      "id": 42,
+      "age": 24,
+      "gender": "Male",
+      "income": 43000,
+      "spending": 48,
+      "purchases": 15,
+      "cluster": 4
+    },
+    {
+      "id": 43,
+      "age": 48,
+      "gender": "Male",
+      "income": 45000,
+      "spending": 33,
+      "purchases": 10,
+      "cluster": 0
+    },
+    {
+      "id": 44,
+      "age": 31,
+      "gender": "Female",
+      "income": 46000,
+      "spending": 55,
+      "purchases": 16,
+      "cluster": 4
+    },
+    {
+      "id": 45,
+      "age": 26,
+      "gender": "Female",
+      "income": 46000,
+      "spending": 77,
+      "purchases": 24,
+      "cluster": 1
+    },
+    {
+      "id": 46,
+      "age": 29,
+      "gender": "Male",
+      "income": 48000,
+      "spending": 25,
+      "purchases": 7,
+      "cluster": 0
+    },
+    {
+      "id": 47,
+      "age": 48,
+      "gender": "Male",
+      "income": 48000,
+      "spending": 41,
+      "purchases": 13,
+      "cluster": 4
+    },
+    {
+      "id": 48,
+      "age": 20,
+      "gender": "Female",
+      "income": 49000,
+      "spending": 82,
+      "purchases": 27,
+      "cluster": 1
+    },
+    {
+      "id": 49,
+      "age": 56,
+      "gender": "Male",
+      "income": 50000,
+      "spending": 18,
+      "purchases": 5,
+      "cluster": 0
+    },
+    {
+      "id": 50,
+      "age": 22,
+      "gender": "Female",
+      "income": 50000,
+      "spending": 69,
+      "purchases": 20,
+      "cluster": 1
+    },
+    {
+      "id": 51,
+      "age": 37,
+      "gender": "Male",
+      "income": 52000,
+      "spending": 47,
+      "purchases": 14,
+      "cluster": 4
+    },
+    {
+      "id": 52,
+      "age": 29,
+      "gender": "Female",
+      "income": 52000,
+      "spending": 88,
+      "purchases": 30,
+      "cluster": 1
+    },
+    {
+      "id": 53,
+      "age": 62,
+      "gender": "Female",
+      "income": 54000,
+      "spending": 8,
+      "purchases": 3,
+      "cluster": 0
+    },
+    {
+      "id": 54,
+      "age": 32,
+      "gender": "Male",
+      "income": 54000,
+      "spending": 62,
+      "purchases": 18,
+      "cluster": 1
+    },
+    {
+      "id": 55,
+      "age": 44,
+      "gender": "Female",
+      "income": 55000,
+      "spending": 39,
+      "purchases": 12,
+      "cluster": 4
+    },
+    {
+      "id": 56,
+      "age": 24,
+      "gender": "Male",
+      "income": 55000,
+      "spending": 85,
+      "purchases": 28,
+      "cluster": 1
+    },
+    {
+      "id": 57,
+      "age": 58,
+      "gender": "Male",
+      "income": 56000,
+      "spending": 15,
+      "purchases": 5,
+      "cluster": 0
+    },
+    {
+      "id": 58,
+      "age": 27,
+      "gender": "Female",
+      "income": 56000,
+      "spending": 72,
+      "purchases": 21,
+      "cluster": 1
+    },
+    {
+      "id": 59,
+      "age": 40,
+      "gender": "Male",
+      "income": 58000,
+      "spending": 42,
+      "purchases": 13,
+      "cluster": 4
+    },
+    {
+      "id": 60,
+      "age": 33,
+      "gender": "Female",
+      "income": 58000,
+      "spending": 91,
+      "purchases": 32,
+      "cluster": 1
+    },
+    {
+      "id": 61,
+      "age": 52,
+      "gender": "Female",
+      "income": 59000,
+      "spending": 28,
+      "purchases": 8,
+      "cluster": 0
+    },
+    {
+      "id": 62,
+      "age": 35,
+      "gender": "Male",
+      "income": 59000,
+      "spending": 55,
+      "purchases": 16,
+      "cluster": 4
+    },
+    {
+      "id": 63,
+      "age": 51,
+      "gender": "Male",
+      "income": 60000,
+      "spending": 36,
+      "purchases": 11,
+      "cluster": 4
+    },
+    {
+      "id": 64,
+      "age": 25,
+      "gender": "Female",
+      "income": 60000,
+      "spending": 78,
+      "purchases": 25,
+      "cluster": 1
+    },
+    {
+      "id": 65,
+      "age": 31,
+      "gender": "Female",
+      "income": 61000,
+      "spending": 67,
+      "purchases": 19,
+      "cluster": 1
+    },
+    {
+      "id": 66,
+      "age": 42,
+      "gender": "Male",
+      "income": 62000,
+      "spending": 44,
+      "purchases": 14,
+      "cluster": 4
+    },
+    {
+      "id": 67,
+      "age": 28,
+      "gender": "Female",
+      "income": 63000,
+      "spending": 90,
+      "purchases": 31,
+      "cluster": 1
+    },
+    {
+      "id": 68,
+      "age": 36,
+      "gender": "Male",
+      "income": 63000,
+      "spending": 33,
+      "purchases": 10,
+      "cluster": 4
+    },
+    {
+      "id": 69,
+      "age": 20,
+      "gender": "Female",
+      "income": 65000,
+      "spending": 83,
+      "purchases": 27,
+      "cluster": 1
+    },
+    {
+      "id": 70,
+      "age": 55,
+      "gender": "Male",
+      "income": 65000,
+      "spending": 21,
+      "purchases": 6,
+      "cluster": 0
+    },
+    {
+      "id": 71,
+      "age": 33,
+      "gender": "Female",
+      "income": 67000,
+      "spending": 56,
+      "purchases": 17,
+      "cluster": 4
+    },
+    {
+      "id": 72,
+      "age": 44,
+      "gender": "Male",
+      "income": 67000,
+      "spending": 42,
+      "purchases": 13,
+      "cluster": 4
+    },
+    {
+      "id": 73,
+      "age": 38,
+      "gender": "Female",
+      "income": 69000,
+      "spending": 71,
+      "purchases": 22,
+      "cluster": 1
+    },
+    {
+      "id": 74,
+      "age": 47,
+      "gender": "Male",
+      "income": 70000,
+      "spending": 38,
+      "purchases": 12,
+      "cluster": 4
+    },
+    {
+      "id": 75,
+      "age": 27,
+      "gender": "Female",
+      "income": 70000,
+      "spending": 88,
+      "purchases": 29,
+      "cluster": 1
+    },
+    {
+      "id": 76,
+      "age": 30,
+      "gender": "Male",
+      "income": 72000,
+      "spending": 50,
+      "purchases": 15,
+      "cluster": 4
+    },
+    {
+      "id": 77,
+      "age": 56,
+      "gender": "Female",
+      "income": 73000,
+      "spending": 15,
+      "purchases": 4,
+      "cluster": 0
+    },
+    {
+      "id": 78,
+      "age": 23,
+      "gender": "Male",
+      "income": 73000,
+      "spending": 95,
+      "purchases": 35,
+      "cluster": 1
+    },
+    {
+      "id": 79,
+      "age": 50,
+      "gender": "Male",
+      "income": 75000,
+      "spending": 34,
+      "purchases": 10,
+      "cluster": 4
+    },
+    {
+      "id": 80,
+      "age": 36,
+      "gender": "Female",
+      "income": 75000,
+      "spending": 63,
+      "purchases": 19,
+      "cluster": 4
+    },
+    {
+      "id": 81,
+      "age": 31,
+      "gender": "Female",
+      "income": 76000,
+      "spending": 82,
+      "purchases": 26,
+      "cluster": 1
+    },
+    {
+      "id": 82,
+      "age": 42,
+      "gender": "Male",
+      "income": 78000,
+      "spending": 46,
+      "purchases": 14,
+      "cluster": 4
+    },
+    {
+      "id": 83,
+      "age": 62,
+      "gender": "Male",
+      "income": 78000,
+      "spending": 12,
+      "purchases": 3,
+      "cluster": 0
+    },
+    {
+      "id": 84,
+      "age": 29,
+      "gender": "Female",
+      "income": 78000,
+      "spending": 75,
+      "purchases": 23,
+      "cluster": 1
+    },
+    {
+      "id": 85,
+      "age": 55,
+      "gender": "Female",
+      "income": 80000,
+      "spending": 19,
+      "purchases": 5,
+      "cluster": 0
+    },
+    {
+      "id": 86,
+      "age": 25,
+      "gender": "Male",
+      "income": 80000,
+      "spending": 93,
+      "purchases": 33,
+      "cluster": 1
+    },
+    {
+      "id": 87,
+      "age": 39,
+      "gender": "Male",
+      "income": 82000,
+      "spending": 40,
+      "purchases": 12,
+      "cluster": 4
+    },
+    {
+      "id": 88,
+      "age": 48,
+      "gender": "Female",
+      "income": 83000,
+      "spending": 59,
+      "purchases": 18,
+      "cluster": 4
+    },
+    {
+      "id": 89,
+      "age": 22,
+      "gender": "Female",
+      "income": 85000,
+      "spending": 98,
+      "purchases": 36,
+      "cluster": 1
+    },
+    {
+      "id": 90,
+      "age": 34,
+      "gender": "Male",
+      "income": 85000,
+      "spending": 42,
+      "purchases": 13,
+      "cluster": 4
+    },
+    {
+      "id": 91,
+      "age": 60,
+      "gender": "Male",
+      "income": 86000,
+      "spending": 16,
+      "purchases": 4,
+      "cluster": 0
+    },
+    {
+      "id": 92,
+      "age": 28,
+      "gender": "Female",
+      "income": 86000,
+      "spending": 79,
+      "purchases": 25,
+      "cluster": 1
+    },
+    {
+      "id": 93,
+      "age": 50,
+      "gender": "Female",
+      "income": 87000,
+      "spending": 30,
+      "purchases": 9,
+      "cluster": 4
+    },
+    {
+      "id": 94,
+      "age": 27,
+      "gender": "Male",
+      "income": 88000,
+      "spending": 87,
+      "purchases": 30,
+      "cluster": 1
+    },
+    {
+      "id": 95,
+      "age": 46,
+      "gender": "Male",
+      "income": 90000,
+      "spending": 35,
+      "purchases": 11,
+      "cluster": 4
+    },
+    {
+      "id": 96,
+      "age": 20,
+      "gender": "Female",
+      "income": 90000,
+      "spending": 91,
+      "purchases": 32,
+      "cluster": 1
+    },
+    {
+      "id": 97,
+      "age": 38,
+      "gender": "Female",
+      "income": 92000,
+      "spending": 52,
+      "purchases": 16,
+      "cluster": 4
+    },
+    {
+      "id": 98,
+      "age": 55,
+      "gender": "Male",
+      "income": 93000,
+      "spending": 22,
+      "purchases": 6,
+      "cluster": 4
+    },
+    {
+      "id": 99,
+      "age": 32,
+      "gender": "Female",
+      "income": 95000,
+      "spending": 85,
+      "purchases": 28,
+      "cluster": 1
+    },
+    {
+      "id": 100,
+      "age": 23,
+      "gender": "Male",
+      "income": 95000,
+      "spending": 73,
+      "purchases": 22,
+      "cluster": 1
+    },
+    {
+      "id": 101,
+      "age": 40,
+      "gender": "Male",
+      "income": 96000,
+      "spending": 44,
+      "purchases": 14,
+      "cluster": 4
+    },
+    {
+      "id": 102,
+      "age": 59,
+      "gender": "Female",
+      "income": 97000,
+      "spending": 13,
+      "purchases": 4,
+      "cluster": 3
+    },
+    {
+      "id": 103,
+      "age": 25,
+      "gender": "Female",
+      "income": 98000,
+      "spending": 94,
+      "purchases": 34,
+      "cluster": 1
+    },
+    {
+      "id": 104,
+      "age": 33,
+      "gender": "Male",
+      "income": 99000,
+      "spending": 55,
+      "purchases": 17,
+      "cluster": 4
+    },
+    {
+      "id": 105,
+      "age": 42,
+      "gender": "Female",
+      "income": 100000,
+      "spending": 68,
+      "purchases": 20,
+      "cluster": 4
+    },
+    {
+      "id": 106,
+      "age": 29,
+      "gender": "Male",
+      "income": 101000,
+      "spending": 88,
+      "purchases": 29,
+      "cluster": 2
+    },
+    {
+      "id": 107,
+      "age": 65,
+      "gender": "Male",
+      "income": 103000,
+      "spending": 9,
+      "purchases": 3,
+      "cluster": 3
+    },
+    {
+      "id": 108,
+      "age": 24,
+      "gender": "Female",
+      "income": 103000,
+      "spending": 91,
+      "purchases": 31,
+      "cluster": 2
+    },
+    {
+      "id": 109,
+      "age": 48,
+      "gender": "Male",
+      "income": 105000,
+      "spending": 38,
+      "purchases": 12,
+      "cluster": 4
+    },
+    {
+      "id": 110,
+      "age": 35,
+      "gender": "Female",
+      "income": 108000,
+      "spending": 77,
+      "purchases": 24,
+      "cluster": 2
+    },
+    {
+      "id": 111,
+      "age": 22,
+      "gender": "Male",
+      "income": 108000,
+      "spending": 96,
+      "purchases": 36,
+      "cluster": 2
+    },
+    {
+      "id": 112,
+      "age": 54,
+      "gender": "Female",
+      "income": 110000,
+      "spending": 25,
+      "purchases": 7,
+      "cluster": 3
+    },
+    {
+      "id": 113,
+      "age": 31,
+      "gender": "Male",
+      "income": 112000,
+      "spending": 69,
+      "purchases": 21,
+      "cluster": 2
+    },
+    {
+      "id": 114,
+      "age": 20,
+      "gender": "Female",
+      "income": 113000,
+      "spending": 92,
+      "purchases": 33,
+      "cluster": 2
+    },
+    {
+      "id": 115,
+      "age": 47,
+      "gender": "Male",
+      "income": 115000,
+      "spending": 32,
+      "purchases": 10,
+      "cluster": 3
+    },
+    {
+      "id": 116,
+      "age": 36,
+      "gender": "Female",
+      "income": 118000,
+      "spending": 86,
+      "purchases": 28,
+      "cluster": 2
+    },
+    {
+      "id": 117,
+      "age": 28,
+      "gender": "Male",
+      "income": 120000,
+      "spending": 58,
+      "purchases": 17,
+      "cluster": 4
+    },
+    {
+      "id": 118,
+      "age": 60,
+      "gender": "Female",
+      "income": 120000,
+      "spending": 14,
+      "purchases": 4,
+      "cluster": 3
+    },
+    {
+      "id": 119,
+      "age": 25,
+      "gender": "Female",
+      "income": 122000,
+      "spending": 97,
+      "purchases": 35,
+      "cluster": 2
+    },
+    {
+      "id": 120,
+      "age": 40,
+      "gender": "Male",
+      "income": 125000,
+      "spending": 45,
+      "purchases": 14,
+      "cluster": 3
+    },
+    {
+      "id": 121,
+      "age": 33,
+      "gender": "Female",
+      "income": 126000,
+      "spending": 80,
+      "purchases": 26,
+      "cluster": 2
+    },
+    {
+      "id": 122,
+      "age": 52,
+      "gender": "Male",
+      "income": 128000,
+      "spending": 20,
+      "purchases": 6,
+      "cluster": 3
+    },
+    {
+      "id": 123,
+      "age": 21,
+      "gender": "Male",
+      "income": 130000,
+      "spending": 93,
+      "purchases": 34,
+      "cluster": 2
+    },
+    {
+      "id": 124,
+      "age": 45,
+      "gender": "Female",
+      "income": 132000,
+      "spending": 41,
+      "purchases": 13,
+      "cluster": 3
+    },
+    {
+      "id": 125,
+      "age": 29,
+      "gender": "Female",
+      "income": 133000,
+      "spending": 87,
+      "purchases": 30,
+      "cluster": 2
+    },
+    {
+      "id": 126,
+      "age": 38,
+      "gender": "Male",
+      "income": 135000,
+      "spending": 50,
+      "purchases": 15,
+      "cluster": 3
+    },
+    {
+      "id": 127,
+      "age": 62,
+      "gender": "Female",
+      "income": 137000,
+      "spending": 11,
+      "purchases": 3,
+      "cluster": 3
+    },
+    {
+      "id": 128,
+      "age": 27,
+      "gender": "Male",
+      "income": 138000,
+      "spending": 78,
+      "purchases": 24,
+      "cluster": 2
+    },
+    {
+      "id": 129,
+      "age": 50,
+      "gender": "Male",
+      "income": 140000,
+      "spending": 35,
+      "purchases": 11,
+      "cluster": 3
+    },
+    {
+      "id": 130,
+      "age": 23,
+      "gender": "Female",
+      "income": 140000,
+      "spending": 99,
+      "purchases": 37,
+      "cluster": 2
+    },
+    {
+      "id": 131,
+      "age": 35,
+      "gender": "Female",
+      "income": 142000,
+      "spending": 65,
+      "purchases": 19,
+      "cluster": 2
+    },
+    {
+      "id": 132,
+      "age": 44,
+      "gender": "Male",
+      "income": 145000,
+      "spending": 43,
+      "purchases": 13,
+      "cluster": 3
+    },
+    {
+      "id": 133,
+      "age": 30,
+      "gender": "Female",
+      "income": 148000,
+      "spending": 89,
+      "purchases": 31,
+      "cluster": 2
+    },
+    {
+      "id": 134,
+      "age": 56,
+      "gender": "Male",
+      "income": 150000,
+      "spending": 18,
+      "purchases": 5,
+      "cluster": 3
+    },
+    {
+      "id": 135,
+      "age": 22,
+      "gender": "Female",
+      "income": 150000,
+      "spending": 95,
+      "purchases": 34,
+      "cluster": 2
+    },
+    {
+      "id": 136,
+      "age": 41,
+      "gender": "Male",
+      "income": 152000,
+      "spending": 52,
+      "purchases": 16,
+      "cluster": 3
+    },
+    {
+      "id": 137,
+      "age": 28,
+      "gender": "Female",
+      "income": 155000,
+      "spending": 83,
+      "purchases": 27,
+      "cluster": 2
+    },
+    {
+      "id": 138,
+      "age": 63,
+      "gender": "Male",
+      "income": 155000,
+      "spending": 10,
+      "purchases": 3,
+      "cluster": 3
+    },
+    {
+      "id": 139,
+      "age": 34,
+      "gender": "Female",
+      "income": 158000,
+      "spending": 76,
+      "purchases": 23,
+      "cluster": 2
+    },
+    {
+      "id": 140,
+      "age": 19,
+      "gender": "Male",
+      "income": 160000,
+      "spending": 94,
+      "purchases": 33,
+      "cluster": 2
+    },
+    {
+      "id": 141,
+      "age": 48,
+      "gender": "Female",
+      "income": 162000,
+      "spending": 37,
+      "purchases": 11,
+      "cluster": 3
+    },
+    {
+      "id": 142,
+      "age": 37,
+      "gender": "Male",
+      "income": 165000,
+      "spending": 62,
+      "purchases": 18,
+      "cluster": 2
+    },
+    {
+      "id": 143,
+      "age": 25,
+      "gender": "Female",
+      "income": 168000,
+      "spending": 91,
+      "purchases": 32,
+      "cluster": 2
+    },
+    {
+      "id": 144,
+      "age": 53,
+      "gender": "Male",
+      "income": 170000,
+      "spending": 22,
+      "purchases": 7,
+      "cluster": 3
+    },
+    {
+      "id": 145,
+      "age": 31,
+      "gender": "Female",
+      "income": 172000,
+      "spending": 86,
+      "purchases": 29,
+      "cluster": 2
+    },
+    {
+      "id": 146,
+      "age": 42,
+      "gender": "Male",
+      "income": 175000,
+      "spending": 48,
+      "purchases": 14,
+      "cluster": 3
+    },
+    {
+      "id": 147,
+      "age": 20,
+      "gender": "Female",
+      "income": 175000,
+      "spending": 97,
+      "purchases": 36,
+      "cluster": 2
+    },
+    {
+      "id": 148,
+      "age": 58,
+      "gender": "Male",
+      "income": 178000,
+      "spending": 15,
+      "purchases": 4,
+      "cluster": 3
+    },
+    {
+      "id": 149,
+      "age": 29,
+      "gender": "Female",
+      "income": 180000,
+      "spending": 88,
+      "purchases": 30,
+      "cluster": 2
+    },
+    {
+      "id": 150,
+      "age": 36,
+      "gender": "Male",
+      "income": 180000,
+      "spending": 55,
+      "purchases": 16,
+      "cluster": 2
+    },
+    {
+      "id": 151,
+      "age": 24,
+      "gender": "Female",
+      "income": 182000,
+      "spending": 93,
+      "purchases": 33,
+      "cluster": 2
+    },
+    {
+      "id": 152,
+      "age": 47,
+      "gender": "Male",
+      "income": 185000,
+      "spending": 30,
+      "purchases": 9,
+      "cluster": 3
+    },
+    {
+      "id": 153,
+      "age": 33,
+      "gender": "Female",
+      "income": 188000,
+      "spending": 82,
+      "purchases": 26,
+      "cluster": 2
+    },
+    {
+      "id": 154,
+      "age": 55,
+      "gender": "Male",
+      "income": 190000,
+      "spending": 19,
+      "purchases": 5,
+      "cluster": 3
+    },
+    {
+      "id": 155,
+      "age": 21,
+      "gender": "Male",
+      "income": 190000,
+      "spending": 96,
+      "purchases": 35,
+      "cluster": 2
+    },
+    {
+      "id": 156,
+      "age": 40,
+      "gender": "Female",
+      "income": 192000,
+      "spending": 45,
+      "purchases": 13,
+      "cluster": 3
+    },
+    {
+      "id": 157,
+      "age": 28,
+      "gender": "Male",
+      "income": 195000,
+      "spending": 75,
+      "purchases": 23,
+      "cluster": 2
+    },
+    {
+      "id": 158,
+      "age": 61,
+      "gender": "Female",
+      "income": 195000,
+      "spending": 12,
+      "purchases": 4,
+      "cluster": 3
+    },
+    {
+      "id": 159,
+      "age": 35,
+      "gender": "Female",
+      "income": 198000,
+      "spending": 90,
+      "purchases": 31,
+      "cluster": 2
+    },
+    {
+      "id": 160,
+      "age": 26,
+      "gender": "Male",
+      "income": 200000,
+      "spending": 60,
+      "purchases": 18,
+      "cluster": 2
+    },
+    {
+      "id": 161,
+      "age": 43,
+      "gender": "Female",
+      "income": 105000,
+      "spending": 72,
+      "purchases": 22,
+      "cluster": 2
+    },
+    {
+      "id": 162,
+      "age": 38,
+      "gender": "Male",
+      "income": 72000,
+      "spending": 58,
+      "purchases": 17,
+      "cluster": 4
+    },
+    {
+      "id": 163,
+      "age": 22,
+      "gender": "Female",
+      "income": 45000,
+      "spending": 85,
+      "purchases": 27,
+      "cluster": 1
+    },
+    {
+      "id": 164,
+      "age": 51,
+      "gender": "Male",
+      "income": 88000,
+      "spending": 28,
+      "purchases": 8,
+      "cluster": 4
+    },
+    {
+      "id": 165,
+      "age": 27,
+      "gender": "Female",
+      "income": 62000,
+      "spending": 76,
+      "purchases": 23,
+      "cluster": 1
+    },
+    {
+      "id": 166,
+      "age": 33,
+      "gender": "Male",
+      "income": 55000,
+      "spending": 41,
+      "purchases": 12,
+      "cluster": 4
+    },
+    {
+      "id": 167,
+      "age": 45,
+      "gender": "Female",
+      "income": 130000,
+      "spending": 63,
+      "purchases": 19,
+      "cluster": 2
+    },
+    {
+      "id": 168,
+      "age": 29,
+      "gender": "Male",
+      "income": 78000,
+      "spending": 89,
+      "purchases": 30,
+      "cluster": 1
+    },
+    {
+      "id": 169,
+      "age": 36,
+      "gender": "Female",
+      "income": 92000,
+      "spending": 34,
+      "purchases": 10,
+      "cluster": 4
+    },
+    {
+      "id": 170,
+      "age": 41,
+      "gender": "Male",
+      "income": 110000,
+      "spending": 51,
+      "purchases": 15,
+      "cluster": 4
+    },
+    {
+      "id": 171,
+      "age": 24,
+      "gender": "Female",
+      "income": 38000,
+      "spending": 94,
+      "purchases": 33,
+      "cluster": 1
+    },
+    {
+      "id": 172,
+      "age": 58,
+      "gender": "Male",
+      "income": 145000,
+      "spending": 17,
+      "purchases": 5,
+      "cluster": 3
+    },
+    {
+      "id": 173,
+      "age": 30,
+      "gender": "Female",
+      "income": 68000,
+      "spending": 73,
+      "purchases": 22,
+      "cluster": 1
+    },
+    {
+      "id": 174,
+      "age": 47,
+      "gender": "Male",
+      "income": 115000,
+      "spending": 39,
+      "purchases": 12,
+      "cluster": 3
+    },
+    {
+      "id": 175,
+      "age": 22,
+      "gender": "Male",
+      "income": 42000,
+      "spending": 88,
+      "purchases": 29,
+      "cluster": 1
+    },
+    {
+      "id": 176,
+      "age": 39,
+      "gender": "Female",
+      "income": 98000,
+      "spending": 56,
+      "purchases": 17,
+      "cluster": 4
+    },
+    {
+      "id": 177,
+      "age": 53,
+      "gender": "Male",
+      "income": 160000,
+      "spending": 23,
+      "purchases": 7,
+      "cluster": 3
+    },
+    {
+      "id": 178,
+      "age": 26,
+      "gender": "Female",
+      "income": 52000,
+      "spending": 81,
+      "purchases": 26,
+      "cluster": 1
+    },
+    {
+      "id": 179,
+      "age": 34,
+      "gender": "Male",
+      "income": 85000,
+      "spending": 47,
+      "purchases": 14,
+      "cluster": 4
+    },
+    {
+      "id": 180,
+      "age": 60,
+      "gender": "Female",
+      "income": 135000,
+      "spending": 11,
+      "purchases": 3,
+      "cluster": 3
+    },
+    {
+      "id": 181,
+      "age": 21,
+      "gender": "Male",
+      "income": 30000,
+      "spending": 92,
+      "purchases": 31,
+      "cluster": 1
+    },
+    {
+      "id": 182,
+      "age": 44,
+      "gender": "Female",
+      "income": 105000,
+      "spending": 38,
+      "purchases": 11,
+      "cluster": 4
+    },
+    {
+      "id": 183,
+      "age": 28,
+      "gender": "Male",
+      "income": 65000,
+      "spending": 77,
+      "purchases": 24,
+      "cluster": 1
+    },
+    {
+      "id": 184,
+      "age": 37,
+      "gender": "Female",
+      "income": 120000,
+      "spending": 54,
+      "purchases": 16,
+      "cluster": 4
+    },
+    {
+      "id": 185,
+      "age": 50,
+      "gender": "Male",
+      "income": 150000,
+      "spending": 31,
+      "purchases": 9,
+      "cluster": 3
+    },
+    {
+      "id": 186,
+      "age": 23,
+      "gender": "Female",
+      "income": 40000,
+      "spending": 96,
+      "purchases": 35,
+      "cluster": 1
+    },
+    {
+      "id": 187,
+      "age": 46,
+      "gender": "Male",
+      "income": 100000,
+      "spending": 42,
+      "purchases": 13,
+      "cluster": 4
+    },
+    {
+      "id": 188,
+      "age": 32,
+      "gender": "Female",
+      "income": 75000,
+      "spending": 68,
+      "purchases": 20,
+      "cluster": 1
+    },
+    {
+      "id": 189,
+      "age": 55,
+      "gender": "Male",
+      "income": 140000,
+      "spending": 19,
+      "purchases": 5,
+      "cluster": 3
+    },
+    {
+      "id": 190,
+      "age": 25,
+      "gender": "Female",
+      "income": 55000,
+      "spending": 84,
+      "purchases": 27,
+      "cluster": 1
+    },
+    {
+      "id": 191,
+      "age": 42,
+      "gender": "Male",
+      "income": 95000,
+      "spending": 45,
+      "purchases": 14,
+      "cluster": 4
+    },
+    {
+      "id": 192,
+      "age": 29,
+      "gender": "Female",
+      "income": 82000,
+      "spending": 79,
+      "purchases": 25,
+      "cluster": 1
+    },
+    {
+      "id": 193,
+      "age": 38,
+      "gender": "Male",
+      "income": 125000,
+      "spending": 37,
+      "purchases": 11,
+      "cluster": 3
+    },
+    {
+      "id": 194,
+      "age": 20,
+      "gender": "Female",
+      "income": 35000,
+      "spending": 93,
+      "purchases": 32,
+      "cluster": 1
+    },
+    {
+      "id": 195,
+      "age": 48,
+      "gender": "Male",
+      "income": 110000,
+      "spending": 29,
+      "purchases": 8,
+      "cluster": 3
+    },
+    {
+      "id": 196,
+      "age": 31,
+      "gender": "Female",
+      "income": 70000,
+      "spending": 71,
+      "purchases": 21,
+      "cluster": 1
+    },
+    {
+      "id": 197,
+      "age": 57,
+      "gender": "Male",
+      "income": 155000,
+      "spending": 16,
+      "purchases": 5,
+      "cluster": 3
+    },
+    {
+      "id": 198,
+      "age": 24,
+      "gender": "Male",
+      "income": 48000,
+      "spending": 86,
+      "purchases": 28,
+      "cluster": 1
+    },
+    {
+      "id": 199,
+      "age": 36,
+      "gender": "Female",
+      "income": 90000,
+      "spending": 58,
+      "purchases": 17,
+      "cluster": 4
+    },
+    {
+      "id": 200,
+      "age": 43,
+      "gender": "Male",
+      "income": 130000,
+      "spending": 44,
+      "purchases": 13,
+      "cluster": 3
+    }
+  ]
+}
